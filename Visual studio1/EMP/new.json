@@ -1,0 +1,70 @@
+[{
+    "name":"John",
+    "empid":"10233",
+    "skills":"React js",
+    "project":"Cognizant Interval",
+    "HCM":"Alex"
+},
+{
+    "name":"Mary",
+    "empid":"87564",
+    "skills":"Java",
+    "project":"Cognizant Interval",
+    "HCM":"Alex"
+},
+{
+    "name":"Donn",
+    "empid":"47577",
+    "skills":"React js",
+    "project":"Cognizant Interval",
+    "HCM":"Alex"
+},
+{
+    "name":"Evet",
+    "empid":"85858",
+    "skills":"Python",
+    "project":"Cognizant Interval",
+    "HCM":"Alex"
+},
+{
+    "name":"Berin",
+    "empid":"75858",
+    "skills":"Java",
+    "project":"Cognizant Interval",
+    "HCM":"Alex"
+},
+{
+    "name":"Jerin",
+    "empid":"10663",
+    "skills":"React js",
+    "project":"Cognizant Interval",
+    "HCM":"Alex"
+},
+{
+    "name":"Patrick",
+    "empid":"90233",
+    "skills":"Python",
+    "project":"Cognizant Interval",
+    "HCM":"Alex"
+},
+{
+    "name":"Agna",
+    "empid":"74733",
+    "skills":".NET",
+    "project":"Cognizant Interval",
+    "HCM":"Alex"
+},
+{
+    "name":"Alfred",
+    "empid":"88233",
+    "skills":"React js",
+    "project":"Cognizant Interval",
+    "HCM":"Alex"
+},
+{
+    "name":"Aiden",
+    "empid":"99993",
+    "skills":"React js",
+    "project":"Cognizant Interval",
+    "HCM":"Alex"
+} ]

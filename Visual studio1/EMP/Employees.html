@@ -1,0 +1,203 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css1/reset.css">
+    <link rel="stylesheet" href="employees.css">
+    <script>
+            var xhr=new XMLHttpRequest();
+            xhr.onreadystatechange=function (){
+                if(this.readyState==4 && this.status==200)
+                {
+                    var ob=JSON.parse(xhr.response);
+                     
+                    for(var i=0;i<10;i++)
+                    { 
+                        document.getElementsByClassName("sp11")[i].innerHTML=ob[i].name;
+                        document.getElementsByClassName("sp12")[i].innerHTML=ob[i].empid;
+                        document.getElementsByClassName("sp13")[i].defaultValue=ob[i].skills;
+                        document.getElementsByClassName("sp14")[i].innerHTML=ob[i].project;
+                        document.getElementsByClassName("sp15")[i].innerHTML=ob[i].HCM;
+                         }
+        
+                    var sk;
+                    var option;
+                    var page;
+                     
+                    
+                    sk=document.querySelectorAll(".sp13");
+                    option=document.querySelectorAll(".sp16");
+                    sk.forEach((element,index)=>{
+                       element.onfocus= ()=> editing(page=index)
+                    })
+                    option.forEach((element,index)=>{
+                        element.onclick = ()=> editing(page=index)
+                    })
+    
+                    function editing(page){
+                     sk[page].classList.remove('sp13');
+                     option[page].innerText='Save';
+                     
+                     option[page].onclick = ()=>{
+                     option[page].innerText='Edit';
+                     sk[page].classList.add('sp13');
+                     }
+                    }
+                }
+            }
+            xhr.open("GET","new.json",true);
+            xhr.send();
+        
+    </script>
+
+
+</head>
+<body>
+   <div class="maindiv">
+       <div class="main2">
+           <div id="div1">
+        <span class="close" onclick="document.getElementById('div1').style.display='none'">x</span><br>
+           <img src="image1/men.png">
+            <ul>
+                <li><label>Name:</label><span class="sp11"></span></li>
+                <li><label>ID:</label><span class="sp12"></span></li>
+                <li><label>Skills:</label><input type="text" class="sp13"></li>
+                <li><label>Project:</label><span class="sp14"></span></li>
+                <li><label>HCM:</label><span class="sp15"></span></li>
+            </ul>
+            <button type="button" class="sp16">Edit</button>
+            </div>
+            <div id="div2">
+                <span class="close" onclick="document.getElementById('div2').style.display='none'">x</span><br>
+                <img src="image1/men.png">
+                 <ul>
+                     <li><label>Name:</label><span class="sp11"></span></li>
+                     <li><label>ID:</label><span class="sp12"></span></li>
+                     <li><label>Skills:</label><input type="text" class="sp13"></li>
+                     <li><label>Project:</label><span class="sp14"></span></li>
+                     <li><label>HCM:</label><span class="sp15"></span></li>
+                 </ul>
+                 <button type="button" class="sp16">Edit</button>
+                 </div>
+                 <div id="div3">
+                    <span class="close" onclick="document.getElementById('div3').style.display='none'">x</span><br>
+                    <img src="image1/men.png">
+                     <ul>
+                         <li><label>Name:</label><span class="sp11"></span></li>
+                         <li><label>ID:</label><span class="sp12"></span></li>
+                         <li><label>Skills:</label><input type="text" class="sp13"></li>
+                         <li><label>Project:</label><span class="sp14"></span></li>
+                         <li><label>HCM:</label><span class="sp15"></span></li>
+                     </ul>
+                     <button type="button" class="sp16">Edit</button>
+                     </div>  
+                     <div id="div4">
+                        <span class="close" onclick="document.getElementById('div4').style.display='none'">x</span><br>
+                        <img src="image1/men.png">
+                         <ul>
+                             <li><label>Name:</label><span class="sp11"></span></li>
+                             <li><label>ID:</label><span class="sp12"></span></li>
+                             <li><label>Skills:</label><input type="text" class="sp13"></li>
+                             <li><label>Project:</label><span class="sp14"></span></li>
+                             <li><label>HCM:</label><span class="sp15"></span></li>
+                         </ul>
+                         <button type="button" class="sp16">Edit</button>
+                         </div>
+                         <div id="div5">
+                            <span class="close" onclick="document.getElementById('div5').style.display='none'">x</span><br>
+                            <img src="image1/men.png">
+                             <ul>
+                                 <li><label>Name:</label><span class="sp11"></span></li>
+                                 <li><label>ID:</label><span class="sp12"></span></li>
+                                 <li><label>Skills:</label><input type="text" class="sp13"></li>
+                                 <li><label>Project:</label><span class="sp14"></span></li>
+                                 <li><label>HCM:</label><span class="sp15"></span></li>
+                             </ul>
+                             <button type="button" class="sp16">Edit</button>
+                             </div>  
+       </div>
+       <div class="main2">
+        <div id="div6">
+            <span class="close" onclick="document.getElementById('div6').style.display='none'">x</span><br>
+            <img src="image1/men.png">
+             <ul>
+                 <li><label>Name:</label><span class="sp11"></span></li>
+                 <li><label>ID:</label><span class="sp12"></span></li>
+                 <li><label>Skills:</label><input type="text" class="sp13"></li>
+                 <li><label>Project:</label><span class="sp14"></span></li>
+                 <li><label>HCM:</label><span class="sp15"></span></li>
+             </ul>
+             <button type="button" class="sp16">Edit</button>
+             </div>  
+             <div id="div7">
+                <span class="close" onclick="document.getElementById('div7').style.display='none'">x</span><br>
+                <img src="image1/men.png">
+                 <ul>
+                     <li><label>Name:</label><span class="sp11"></span></li>
+                     <li><label>ID:</label><span class="sp12"></span></li>
+                     <li><label>Skills:</label><input type="text" class="sp13"></li>
+                     <li><label>Project:</label><span class="sp14"></span></li>
+                     <li><label>HCM:</label><span class="sp15"></span></li>
+                 </ul>
+                 <button type="button" class="sp16">Edit</button>
+                 </div>  
+                 <div id="div8">
+                    <span class="close" onclick="document.getElementById('div8').style.display='none'">x</span><br>
+                    <img src="image1/men.png">
+                     <ul>
+                         <li><label>Name:</label><span class="sp11"></span></li>
+                         <li><label>ID:</label><span class="sp12"></span></li>
+                         <li><label>Skills:</label><input type="text" class="sp13"></li>
+                         <li><label>Project:</label><span class="sp14"></span></li>
+                         <li><label>HCM:</label><span class="sp15"></span></li>
+                     </ul>
+                     <button type="button" class="sp16">Edit</button>
+                     </div>  
+                     <div id="div9">
+                        <span class="close" onclick="document.getElementById('div9').style.display='none'">x</span><br>
+                        <img src="image1/men.png">
+                         <ul>
+                             <li><label>Name:</label><span class="sp11"></span></li>
+                             <li><label>ID:</label><span class="sp12"></span></li>
+                             <li><label>Skills:</label><input type="text" class="sp13"></li>
+                             <li><label>Project:</label><span class="sp14"></span></li>
+                             <li><label>HCM:</label><span class="sp15"></span></li>
+                         </ul>
+                         <button type="button" class="sp16">Edit</button>
+                         </div>  
+                         <div id="div10">
+                            <span class="close" onclick="document.getElementById('div10').style.display='none'">x</span><br>
+                            <img src="image1/men.png">
+                             <ul>
+                                 <li><label>Name:</label><span class="sp11"></span></li>
+                                 <li><label>ID:</label><span class="sp12"></span></li>
+                                 <li><label>Skills:</label><input type="text" class="sp13"></li>
+                                 <li><label>Project:</label><span class="sp14"></span></li>
+                                 <li><label>HCM:</label><span class="sp15"></span></li>
+                             </ul>
+                             <button type="button" class="sp16">Edit</button>
+                             </div>  
+       </div>
+   </div>
+   <table>
+       <tr>
+           <th>Name</th>
+           <th>ID</th>
+           <th>Skills</th>
+           <th>Project</th>
+           <th>HCM</th>
+           <th></th>
+       </tr>
+       <tr id="row1">
+        <td class="sp11"></td>
+        <td class="sp12"></td>
+        <td><input type="text" class="sp13"></td>
+        <td class="sp14"></td>
+        <td class="sp15"></td>
+        <td> <span class="close" onclick="document.getElementById('row1').style.display='none'">x</span></td>
+       </tr>
+    
+   </table>
+</body>
+</html>
